@@ -25,12 +25,12 @@ SECRET_KEY = '5wyc0=!d!1f%djvn@tc89ud36tf39m^ds%7222khmel(!9_p-+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pbrite.herokuapp.com']
 
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = 
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     
