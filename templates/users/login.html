@@ -1,0 +1,65 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+    .card {
+      margin: 0 auto; /* Added */
+      float: center; /* Added */
+      margin-bottom: 10px; /* Added */
+      }
+      body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body class="bg-light">
+  <div class="bg">
+        <br>
+        <br>
+        <div class="card" style="width: 30rem;">
+        <div class="card-body">
+            <h2>Login</h2>
+            <form method="post">
+              {% csrf_token %}
+              {% bootstrap_form form %}
+              {% buttons %}
+              <button type="submit" class="btn btn-primary">
+                submit
+              </button>
+            {% endbuttons %}  
+            </form>
+            <div class="border-top pt-3">
+              <small class="text-muted">
+                New User?<a class="ml-2" href="/user/register">Sign Up</a>
+              </small>
+            </div>
+            </div>
+            </div>
+            </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  </html>
+  

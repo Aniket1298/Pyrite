@@ -1,0 +1,32 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<br></br>
+<div class="row" class="p-3 mb-3 bg-light text-dark">
+
+    <div class="row"></div>
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+                <img class="card-img-top img-thumbnail" src="{{profile.image.url}}" alt="Card image cap">
+                <div class="card-body">
+                  <h8 class="card-title">{{profile.first_name}} {{profile.last_name}} ( {{user.username}} )<a href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/215/thumbs-up-sign_1f44d.png" class="btn btn-primary float-right">Follow</a></h5>
+                  <p class="card-text">{{profile.about_me}}</p>
+                </div>
+        </div>
+      </div>
+      <div class="col">
+          {% for blog in blogs %}
+          <div class="col-sm-8">
+              <div class="card  mb-4">
+                  <div class="card-body">
+                      <h5  class="float-center">{{blog.title}}</h5>
+                      <h9 class="float-right"></h5>{{blog.posted_on}}</h9>
+                      <p class="card-title" class="text-info"><img src="{{blog.avatar.url}}"  class="rounded-circle"><a href={{ blog.url }} title="View User">{{blog.author}}</a><hr> {{blog.content}}</p>
+                  </div>
+              </div>
+          </div>
+  `       {% endfor %}
+
+      </div>
+      
+</div>
+{% endblock %} 

@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<br></br>
+<div class="container">
+    <div class="col">
+            {% for blog in blogs %}
+            <div class="col-sm-6">
+                <div class="card  mb-4">
+                    <div class="card-body">
+                        <h5  class="float-center">{{blog.title}}</h5>
+                        <h9 class="float-right"></h5>{{blog.posted_on}}</h9>
+                        <p class="card-title" class="text-info"><img src="{{blog.avatar.url}}"  class="rounded-circle"><a href={{ blog.url }} title="View User">{{blog.author}}</a><hr> {{blog.content}}</p>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+    `       {% endfor %} 
+    </div>
+</div>
+{% endblock %} 

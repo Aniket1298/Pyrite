@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% block content%}
+
+  <br>
+
+        <div class="card" style="width: 40rem;">
+        <div class="card-body">
+            <h2 class="float-center">✍️ Write A Blog</h2>
+            <form method="post">
+              {% csrf_token %}
+              {% bootstrap_form form %}
+              {% buttons %}
+              <button type="submit" class="btn btn-primary btn-sm">
+                submit
+              </button>
+            {% endbuttons %}  
+            </form>
+            </div>
+            </div>
+          </div>
+          </div>
+{% endblock %}

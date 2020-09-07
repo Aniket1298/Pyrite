@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<br></br>
+<br></br>
+<div class="container">
+        {% for blog in blogs %}
+                <div class="col-sm-6">
+                    <div class="card bg-light mb-3">
+                        <div class="card-body">
+                            <h5 class="card-text">{{blog.title}}</h5>
+                            <h9 class="float-right"></h5>{{blog.posted_on}}</h9>
+                            <p class="card-title" class="text-info"><img src="{{blog.avatar.url}}"  class="rounded-circle">{{blog.author}}<hr> {{blog.content}}</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <br></br>
+        {% endfor %}  
+</div>
+{% endblock %} 
