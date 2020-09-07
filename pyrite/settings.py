@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['pbrite.herokuapp.com']
 
 # Application definition
 
-INSTALLED_APPS = 
+INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     
