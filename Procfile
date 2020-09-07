@@ -1,0 +1,1 @@
+web: gunicorn pyrite.wsgi:application --log-file - --log-level debug
